@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# --- Virtual environment ---
+venv/
+.venv/
+env/
+
+# --- Secrets ---
+.env
+.streamlit/secrets.toml
+
+# --- Generated content ---
+# The pipeline writes finished posts as <slug>.md straight into the
+# project root (see generate_and_place_images() in
+# backend/reducer/images.py) and illustrations into images/ - neither
+# is source code, and every run produces different files, so they
+# don't belong in version control. The leading "/" scopes this to
+# root-level .md files only, so anything under backend/, ui/, etc.
+# (docs you actually write) still gets tracked normally.
+/*.md
+!/README.md
+images/
+
+# --- Backups / scratch ---
+*.bak
+*.orig
+
+# --- Editor / OS cruft ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Hugging Face model cache, if it ever lands inside the repo ---
+.cache/huggingface/

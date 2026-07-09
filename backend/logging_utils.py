@@ -1,0 +1,27 @@
+"""Shared logger setup.
+
+A bunch of nodes swallow exceptions on purpose (failed search, failed
+image gen, a streaming hiccup) so one flaky call doesn't kill the whole
+run. But swallowed != silent - those all go through
+get_logger(__name__).warning(...) so they still show up in the terminal
+even though the UI just degrades gracefully.
+"""
+from __future__ import annotations
+
+import logging
+
+
+def get_logger(name: str) -> logging.Logger:
+    logger = logging.getLogger(name)
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(
+            logging.Formatter(
+                "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+                datefmt="%H:%M:%S",
+            )
+        )
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+        logger.propagate = False
+    return logger

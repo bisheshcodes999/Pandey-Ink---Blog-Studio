@@ -1,0 +1,131 @@
+# ===========================
+# Core AI Framework
+# ===========================
+langchain
+langchain-core
+langchain-community
+langgraph
+langgraph-checkpoint
+
+# ===========================
+# LLM Providers
+# ===========================
+langchain-ollama
+ollama
+
+langchain-openai
+openai
+
+langchain-huggingface
+transformers
+accelerate
+torch
+sentence-transformers
+
+# ===========================
+# Local Image Generation (Stable Diffusion, CPU)
+# ===========================
+# Backs backend/local_image_gen.py -- generates blog illustrations
+# locally (stabilityai/sd-turbo) instead of calling Google AI Studio.
+diffusers
+safetensors
+
+# ===========================
+# Environment & Config
+# ===========================
+python-dotenv
+pydantic
+typing_extensions
+tenacity
+
+# ===========================
+# Tokenization
+# ===========================
+tiktoken
+
+# ===========================
+# Vector Databases
+# ===========================
+faiss-cpu
+chromadb
+
+# ===========================
+# Retrieval
+# ===========================
+rank-bm25
+# Powers backend/nodes/research.py's Tavily search (via langchain-community's
+# TavilySearchResults tool, which needs this client installed underneath it).
+tavily-python
+
+# ===========================
+# Document Loaders
+# ===========================
+pypdf
+pymupdf
+pdfplumber
+python-docx
+docx2txt
+openpyxl
+unstructured
+markdown
+
+# ===========================
+# OCR
+# ===========================
+pytesseract
+Pillow
+
+# ===========================
+# Web Scraping
+# ===========================
+beautifulsoup4
+lxml
+requests
+httpx
+duckduckgo-search
+
+# ===========================
+# Data Science
+# ===========================
+numpy
+pandas
+scikit-learn
+scipy
+
+# ===========================
+# API Development
+# ===========================
+fastapi
+uvicorn
+
+# ===========================
+# Web Apps
+# ===========================
+streamlit
+gradio
+
+# ===========================
+# Databases
+# ===========================
+sqlalchemy
+psycopg2-binary
+
+# ===========================
+# Utilities
+# ===========================
+python-dateutil
+tqdm
+pyyaml
+jinja2
+rich
+
+# ===========================
+# Testing
+# ===========================
+pytest
+
+# ===========================
+# Optional Notebook Support
+# ===========================
+jupyter
+ipykernel
